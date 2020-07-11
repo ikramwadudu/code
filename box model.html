@@ -12,12 +12,16 @@
             background-color: #f7f7f7;
             margin: 0;
             padding: 0;
+            position: relative;
+        }
+        .clear{
+            clear: both;
         }
         .container{
             width: 80%;
             margin: auto;
             box-shadow: 0 0 4px #dddddd;
-            position: relative;
+           
         }
         nav{
             background-color: #8f8f8f;
@@ -73,21 +77,69 @@
             margin-top: -15px;
             padding: 0 20px 10px;
             width: 70%;
+            float: left;
         }
         .badan p{
             text-indent: 20px;
+            font-size: 18px;
+        }
+        .sidebar p{
+            position: relative;
+            top: 5px;
         }
         .sidebar{
             width: 25%;
             border: solid 1px;
+            height: 150px;
+            margin: 70px 10px 0 0;
+            float: right;
+        }
+        .oyeh{
+            background-image: linear-gradient(90deg,red,blue);
+            width: 80%;
+            box-sizing: border-box;
+            margin: auto;
+            height: 100px;
+        }
+        .oyeh p{
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            line-height: 100px;
+            opacity: 0;
+            transition: all .7s;
+        }
+        .oyeh p:hover{
+            opacity: 1;
+        }
+        .sidebar a{
+            text-decoration: none;
+        }
+        .foter{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+        }
+        .foter p{
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+        }
+        #iklan:target{
             position: absolute;
             right: 0;
-            bottom: 350px;
-            margin-right: 10px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            background-color: #0000007e;
+            z-index: 5;
+            position: fixed;
         }
 
     </style>
 
+    <div id="iklan"></div>
     <div class="container">
         <nav>
             <ul>
@@ -110,9 +162,15 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorum, enim deleniti at, officia pariatur eaque voluptas adipisci fugit eius, voluptate excepturi ab harum. Quibusdam repellat voluptas, dolore ab, exercitationem eum sint architecto cumque harum enim doloremque. Quod debitis blanditiis expedita molestias vero fuga assumenda molestiae officia perferendis cumque dolorem vel magnam ratione placeat quam eos totam, dicta nam necessitatibus vitae. Asperiores sapiente nobis repellendus temporibus iusto dolores qui assumenda quasi neque voluptas recusandae ducimus commodi voluptatibus, aut soluta numquam quidem corporis eius laboriosam? Aspernatur delectus sint quaerat error recusandae, exercitationem dignissimos accusamus, explicabo totam consectetur ad vel molestiae? Tenetur!</p>
             <img src="img/cika.jpeg" alt="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque atque delectus saepe doloribus expedita qui fugiat suscipit et voluptatem! Pariatur nemo est, sit quisquam quam dicta voluptate. Neque sit inventore cum vero pariatur amet accusamus quidem porro dolorum nulla, tempora veritatis delectus deleniti error eaque eius fuga a dignissimos ipsum hic necessitatibus provident reiciendis! Quas, natus tenetur! Minima exercitationem, modi enim illo eveniet earum eos, quos ut, ea provident fugiat quod sapiente. Maiores distinctio et vel expedita consectetur assumenda voluptate eum voluptatum maxime, dolor magnam. Dolorum delectus ex pariatur ratione perspiciatis placeat at debitis! Sequi provident error veritatis asperiores corrupti officia recusandae voluptates est quidem itaque? A odio earum ipsum. Illum laudantium aspernatur temporibus amet omnis nam explicabo at.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias sint amet nesciunt in veritatis minima corporis cupiditate! Quod esse exercitationem doloribus assumenda consequuntur quia, voluptatibus qui laboriosam nemo amet dicta cum soluta dolor odit maxime saepe? Aspernatur adipisci ratione corporis, dolor laboriosam natus! Quia, hic qui quibusdam sint ea natus quod voluptatibus enim officiis. Magni vero eligendi, ducimus omnis, eaque adipisci expedita doloribus minus facere, iste distinctio accusamus laborum nostrum. Voluptates odit quisquam, dignissimos asperiores ratione nobis nesciunt. Rem, facilis qui vel debitis ab possimus sed ducimus inventore, voluptas optio dolores harum? Minus consectetur voluptatibus dolore placeat quis obcaecati iure.</p>
         </div>
         <div class="sidebar">
             <p style="text-align: center; margin-top: 1px;">IKLAN</p>
+            <a href="#iklan"><div class="oyeh"><p>TEKAN FOR IKLAN</p></div></a>
+        </div>
+        <div class="clear"></div>
+        <div class="foter">
+            <p>PT.MENCARI CINTA SEJATI &copy 2020</p>
         </div>
     </div>
 </body>
