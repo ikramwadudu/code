@@ -179,14 +179,21 @@
         }
         .postinger a{
             position: absolute;
-            padding: 5px 25px;
-            border: solid 1px white;
             text-align: center;
             right: 42%;
             bottom: 50px;
+        }
+        #iklan:target .close , #iklan:target .postinger a{
             color: white;
-            animation: Fadein .8s 1.8s backwards;
+            padding: 5px 25px;
+            border: solid 1px white;
             text-decoration: none;
+            animation: Fadein .5s 1.3s backwards;
+        }
+        .close{
+            right: 46.8%;
+            position: absolute;
+            top: 150px;
         }
 
         /* Animation */
@@ -198,21 +205,14 @@
                 transform: scale(1);
             }
         }
-        @keyframes hilang{
-            0%{
-                opacity: 0;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
 
     </style>
 
     <div id="iklan">
+        <a href="#" class="close">CLOSE</a>
         <div class="postinger">
-            <div class="foto"></div>
-            <a href="#">FOLLOW</a>
+            <div class="foto" title="Ini namanya logo"></div>
+            <a href="https://instagram.com/ikramwadudu" target="_blank">FOLLOW</a>
         </div>
     </div>
     <div class="container">
