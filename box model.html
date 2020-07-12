@@ -42,6 +42,10 @@
             color: white;
             text-decoration: none;
             font-family: Arial, Helvetica, sans-serif;
+            transition: all .3s;
+        }
+        li a:hover{
+            color: rgb(72, 249, 255);
         }
         .headline{
             background-image: url(../../WPU/HTML/img/logo.png);
@@ -68,10 +72,23 @@
             width: 250px;
             float: left;
             margin-right: 10px;
+            filter: blur(10px) grayscale(90%) hue-rotate(180deg);
+            transition: all .4s;
+        }
+        img:hover{
+            filter: blur(0px);
         }
         .judul{
-            margin-top: -15px;
+            margin-top: -19px;
             margin-left: -20px;
+        }
+        .judul a{
+            color: black;
+            text-decoration: none;
+            transition: color .5s;
+        }
+        .judul a:hover{
+            color: blue;
         }
         .badan{
             margin-top: -15px;
@@ -135,11 +152,69 @@
             background-color: #0000007e;
             z-index: 5;
             position: fixed;
+            transition: all .7s;
+        }
+        .postinger{
+            width: 0;
+            height: 0;
+            position: relative;
+        }
+        #iklan:target .postinger{
+            width: 50%;
+            height: 350px;
+            background-color: black;
+            margin: 13% auto;
+            animation: Fadein 1.5s .1s backwards;
+        }
+        #iklan:target .foto{
+            background-image: url(../../WPU/HTML/img/logo.png);
+            width: 50%;
+            height: 60%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            left: 25%;
+            transition: all .5s 1.3s;
+            top: 5%;
+        }
+        .postinger a{
+            position: absolute;
+            padding: 5px 25px;
+            border: solid 1px white;
+            text-align: center;
+            right: 42%;
+            bottom: 50px;
+            color: white;
+            animation: Fadein .8s 1.8s backwards;
+            text-decoration: none;
+        }
+
+        /* Animation */
+        @keyframes Fadein{
+            0%{
+                transform: scale(0);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        @keyframes hilang{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
         }
 
     </style>
 
-    <div id="iklan"></div>
+    <div id="iklan">
+        <div class="postinger">
+            <div class="foto"></div>
+            <a href="#">FOLLOW</a>
+        </div>
+    </div>
     <div class="container">
         <nav>
             <ul>
@@ -160,7 +235,7 @@
             <p class="judul">Dibuat oleh <a href="https://instagram.com/ikramwadudu">manusia</a></p>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorum, enim deleniti at, officia pariatur eaque voluptas adipisci fugit eius, voluptate excepturi ab harum. Quibusdam repellat voluptas, dolore ab, exercitationem eum sint architecto cumque harum enim doloremque. Quod debitis blanditiis expedita molestias vero fuga assumenda molestiae officia perferendis cumque dolorem vel magnam ratione placeat quam eos totam, dicta nam necessitatibus vitae. Asperiores sapiente nobis repellendus temporibus iusto dolores qui assumenda quasi neque voluptas recusandae ducimus commodi voluptatibus, aut soluta numquam quidem corporis eius laboriosam? Aspernatur delectus sint quaerat error recusandae, exercitationem dignissimos accusamus, explicabo totam consectetur ad vel molestiae? Tenetur!</p>
-            <img src="img/cika.jpeg" alt="">
+            <img src="img/cika.jpeg" alt="Foto Orang" title="Ini Human?">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloremque atque delectus saepe doloribus expedita qui fugiat suscipit et voluptatem! Pariatur nemo est, sit quisquam quam dicta voluptate. Neque sit inventore cum vero pariatur amet accusamus quidem porro dolorum nulla, tempora veritatis delectus deleniti error eaque eius fuga a dignissimos ipsum hic necessitatibus provident reiciendis! Quas, natus tenetur! Minima exercitationem, modi enim illo eveniet earum eos, quos ut, ea provident fugiat quod sapiente. Maiores distinctio et vel expedita consectetur assumenda voluptate eum voluptatum maxime, dolor magnam. Dolorum delectus ex pariatur ratione perspiciatis placeat at debitis! Sequi provident error veritatis asperiores corrupti officia recusandae voluptates est quidem itaque? A odio earum ipsum. Illum laudantium aspernatur temporibus amet omnis nam explicabo at.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias sint amet nesciunt in veritatis minima corporis cupiditate! Quod esse exercitationem doloribus assumenda consequuntur quia, voluptatibus qui laboriosam nemo amet dicta cum soluta dolor odit maxime saepe? Aspernatur adipisci ratione corporis, dolor laboriosam natus! Quia, hic qui quibusdam sint ea natus quod voluptatibus enim officiis. Magni vero eligendi, ducimus omnis, eaque adipisci expedita doloribus minus facere, iste distinctio accusamus laborum nostrum. Voluptates odit quisquam, dignissimos asperiores ratione nobis nesciunt. Rem, facilis qui vel debitis ab possimus sed ducimus inventore, voluptas optio dolores harum? Minus consectetur voluptatibus dolore placeat quis obcaecati iure.</p>
         </div>
