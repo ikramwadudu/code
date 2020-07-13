@@ -59,14 +59,15 @@
             position: absolute;
             width: 100%;
             height: 5px;
+            animation: warna 5s linear infinite;
         }
         .warna1{
             bottom: 0;
-            background-image: linear-gradient(90deg,rgb(248, 41, 255),rgb(102, 6, 255));
+            background-image: linear-gradient(90deg,rgb(248, 41, 255),rgb(6, 238, 255));
         }
         .warna2{
             top: 0;
-            background-image: linear-gradient(-90deg,rgb(248, 41, 255),rgb(255, 64, 6));
+            background-image: linear-gradient(-90deg,rgb(248, 41, 255),rgb(6, 114, 255));
         }
         img{
             width: 250px;
@@ -112,11 +113,12 @@
             float: right;
         }
         .oyeh{
-            background-image: linear-gradient(90deg,red,blue);
+            background-image: linear-gradient(90deg,rgb(0, 247, 255),rgb(255, 0, 255));
             width: 80%;
             box-sizing: border-box;
             margin: auto;
             height: 100px;
+            animation: warna 5s linear infinite;
         }
         .oyeh p{
             color: white;
@@ -153,6 +155,7 @@
             z-index: 5;
             position: fixed;
             transition: all .7s;
+            animation: warna 20s linear infinite;
         }
         .postinger{
             width: 0;
@@ -182,6 +185,10 @@
             text-align: center;
             right: 42%;
             bottom: 50px;
+            transition: transform .3s;
+        }
+        .postinger a:hover {
+            transform: scale(1.1);
         }
         #iklan:target .close , #iklan:target .postinger a{
             color: white;
@@ -205,6 +212,16 @@
                 transform: scale(1);
             }
         }
+
+        @keyframes warna{
+            0%{
+                filter: hue-rotate(0deg);
+            }
+            50%{
+                filter: hue-rotate(360deg);
+            }
+        }
+
 
     </style>
 
